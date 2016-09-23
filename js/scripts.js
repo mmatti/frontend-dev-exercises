@@ -127,7 +127,7 @@ d3.csv('./census.csv',function(err,data){
 		.attr('y',hgt/2)
 		.attr('height',0)
 		.style('fill',mnyCol)
-		.transition().duration(333)
+		.transition().duration(400)
 			.attr('y',function(d){
 				return y(d.value);
 			})
@@ -145,7 +145,7 @@ d3.csv('./census.csv',function(err,data){
 		.attr('y',y(0))
 		.style('fill',mnyCol)
 		.style('opacity',0.6)
-		.transition().duration(333)
+		.transition().duration(400)
 			.attr('height',function(d){
 				return hgt - y((1 - d.value) - 1);
 			});
@@ -209,7 +209,7 @@ d3.csv('./census.csv',function(err,data){
 		.attr('y',hgt/2)
 		.attr('height',0)
 		.style('fill',mnyCol)
-		.transition().duration(333)
+		.transition().duration(400)
 			.attr('y',function(d){
 				return y(d.value);
 			})
@@ -227,7 +227,7 @@ d3.csv('./census.csv',function(err,data){
 		.attr('y',y(0))
 		.style('fill',mnyCol)
 		.style('opacity',0.6)
-		.transition().duration(333)
+		.transition().duration(400)
 			.attr('height',function(d){
 				return hgt - y((1 - d.value) - 1);
 			});
@@ -315,14 +315,13 @@ d3.csv('./census.csv',function(err,data){
 		.style('fill',function(d){
 			return ethCol(d.key);
 		})
-		.transition().duration(333)
+		.transition().duration(400)
 			.attr('y',function(d){
 				return y(d.value);
 			})
 			.attr('height',function(d){
 				return hgt - y(d.value - 1);
 			});
-
 	cat.selectAll()
 		.data(function(d){
 			return d.values;
@@ -338,7 +337,7 @@ d3.csv('./census.csv',function(err,data){
 			return ethCol(d.key);
 		})
 		.style('opacity',0.6)
-		.transition().duration(333)
+		.transition().duration(400)
 			.attr('height',function(d){
 				return hgt - y((1 - d.value) - 1);
 			});
