@@ -1,0 +1,68 @@
+body{
+	color:#111;
+	background-color:#fff;
+	font-family:sans-serif;
+	font-size:0.9rem;
+	margin:12px 0;
+}
+
+nav{
+	>ul{
+		padding:0;
+		margin:0;
+		>li {
+			font-weight:500;
+			list-style-type: none;
+			display: inline;
+			padding:0 0.5rem;
+			>a{
+				color:#111;
+				text-decoration:none;
+				&:hover{
+					text-decoration:underline;
+				}
+				&.sel{
+					color:#999;
+					pointer-events:none;
+				}
+			}
+		}
+	}
+}
+
+svg {
+	>g {
+		>g.grid{
+			line {
+				stroke: #ccc;
+				stroke-opacity: 0.4;
+				shape-rendering: crispEdges;
+			}
+			path {
+				stroke-width: 0;
+			}
+		}
+		>g.xAxis{
+			g.tick {
+				line {
+					opacity: 0;
+				}
+				text{
+					font-size:0.75rem;
+				}
+			}
+		}
+		>g.legend{
+			text{
+				font-size:0.8rem;
+			}
+		}
+		>text.title{
+			font-weight:500;
+		}
+		>text.note{
+			font-size:0.75rem;
+			font-weight:500;
+		}
+	}
+}
